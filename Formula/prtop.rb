@@ -1,25 +1,25 @@
 class Prtop < Formula
   desc "Terminal TUI for monitoring GitHub pull requests you're involved in as author or reviewer"
   homepage "https://github.com/sg004baa/prtop"
-  version "0.1.3"
+  version "0.1.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sg004baa/prtop/releases/download/v0.1.3/prtop-aarch64-apple-darwin.tar.xz"
-      sha256 "d3193bcb5ae436133f16663193a410c4f943494d9ea1786bccbbef99263294e0"
+      url "https://github.com/sg004baa/prtop/releases/download/v0.1.4/prtop-aarch64-apple-darwin.tar.xz"
+      sha256 "b9a4c48b84098eab8aa731272330f75ff3cc792a37b69572f25161b46e1392e7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sg004baa/prtop/releases/download/v0.1.3/prtop-x86_64-apple-darwin.tar.xz"
-      sha256 "1b9444c1cf697cf1baea535afe0a992369db7cf2b77c62b0b6eb762352c39b05"
+      url "https://github.com/sg004baa/prtop/releases/download/v0.1.4/prtop-x86_64-apple-darwin.tar.xz"
+      sha256 "f9aa8a70e4f170dcf31f84ae6321eb5748b74cc62b4f66dff8311b8033bfe1ec"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sg004baa/prtop/releases/download/v0.1.3/prtop-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1ca409be3a698a82d86a16db69ca3bec6799a69534acdbf8d4261d836b29941d"
+      url "https://github.com/sg004baa/prtop/releases/download/v0.1.4/prtop-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3b2750561c024ab5cb6bf19f512a3209d499211aa2f990d82aa7f162aff7ce5a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sg004baa/prtop/releases/download/v0.1.3/prtop-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e9f2259ae5c3a0cc106b60062b20752136299cbe8e17d99bcffca17b8d93bcb5"
+      url "https://github.com/sg004baa/prtop/releases/download/v0.1.4/prtop-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "f2c0a83658bd31b486a066e6f771b1e4a2d4f467d676bd73121b0634600f323e"
     end
   end
   license "MIT"
