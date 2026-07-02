@@ -3,8 +3,8 @@ class Posting < Formula
 
   desc "Modern API client that lives in your terminal"
   homepage "https://github.com/sg004baa/posting"
-  url "https://github.com/sg004baa/posting/archive/refs/tags/v2.10.2.tar.gz"
-  sha256 "d0f3da332eca9ba1bfd50437f77759afe41e853533e5ef47674d22db76d0ac40"
+  url "https://github.com/sg004baa/posting/archive/refs/tags/v2.10.3.tar.gz"
+  sha256 "fd01f8781b243253a54fcee6d30d232ffdd4c78c384fefa57e48830a6ae7538c"
   license "Apache-2.0"
 
   depends_on "python@3.12"
