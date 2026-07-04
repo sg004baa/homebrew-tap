@@ -5,21 +5,21 @@ class Sabiql < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/sg004baa/sabiql/releases/download/v1.12.9/sabiql-aarch64-apple-darwin.tar.xz"
-      sha256 "ebd879d573299ec4247d307b7bf75432d00a131cb5fb932afeb8cbc84f7e70c3"
+      sha256 "07bf3a34d0132e3290d9815e7bc3b7ac96023fa8ea8b2483e172e56a0272f309"
     end
     if Hardware::CPU.intel?
       url "https://github.com/sg004baa/sabiql/releases/download/v1.12.9/sabiql-x86_64-apple-darwin.tar.xz"
-      sha256 "3aa9ca1986cb286d404b83a582b441f01c699d62e752c02de368e5beec4027dc"
+      sha256 "e856e9a342cc6e56e4605fbd9ed7ced0a635b917362e207006d2c6c4806c32e8"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/sg004baa/sabiql/releases/download/v1.12.9/sabiql-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7eb369be4ebe517f0ec6b1331a6ac17c7c4287e7d95ecdacf87b079237156f7a"
+      sha256 "78149a4a9853fb9123fe85d4df3e5e995ec34779132ac2b15148b7fdfeeb411d"
     end
     if Hardware::CPU.intel?
       url "https://github.com/sg004baa/sabiql/releases/download/v1.12.9/sabiql-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c4cb9842695fe67cf7bebfa33e156fa73626028fab83fac1229c2be861f367cb"
+      sha256 "355e4ac2ca2ea52681a48b8372d8790feabff3e733bbee0747d0cf579fc4524c"
     end
   end
   license "MIT"
