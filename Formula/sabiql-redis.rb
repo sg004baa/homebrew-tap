@@ -5,21 +5,21 @@ class SabiqlRedis < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/sg004baa/sabiql/releases/download/v1.12.9/sabiql-redis-aarch64-apple-darwin.tar.xz"
-      sha256 "1462c35d8021eef7719600bccf4aea21a1317448d62aa4951d3c3925d2855c26"
+      sha256 "2920549209e7e7add0bb69f2a380a26e068a4191d9be1dd811d240ddf0312570"
     end
     if Hardware::CPU.intel?
       url "https://github.com/sg004baa/sabiql/releases/download/v1.12.9/sabiql-redis-x86_64-apple-darwin.tar.xz"
-      sha256 "59b7c75e59b959ae71057ff576793af88486c99d3e09dc2516dc89eed993a8af"
+      sha256 "d490ce9aea871df16fa4049e1e811e666c15999956e31329b6866342e116ae99"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/sg004baa/sabiql/releases/download/v1.12.9/sabiql-redis-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "be1b09ae6943600eebac1827a65e265a15bd96d05dae637c4a4a1dc8bb15bfbd"
+      sha256 "792c4eab7cf4227dede1307735619c514a075128c89fb5962ab2c7479893f269"
     end
     if Hardware::CPU.intel?
       url "https://github.com/sg004baa/sabiql/releases/download/v1.12.9/sabiql-redis-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f6504577468ca4545d47df0f5911d2ef71109098a57094cbe45d6b48362a8484"
+      sha256 "5c2c5f2f3036b0f14e8390cbff2058e06a4d8dc398fc80685d192fd02c29d47b"
     end
   end
   license "MIT"
