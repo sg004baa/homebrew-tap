@@ -1,25 +1,25 @@
 class Sabiql < Formula
   desc "A fast, driver-less TUI for browsing and editing PostgreSQL databases"
   homepage "https://github.com/sg004baa/sabiql"
-  version "1.12.9"
+  version "1.14.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sg004baa/sabiql/releases/download/v1.12.9/sabiql-aarch64-apple-darwin.tar.xz"
-      sha256 "07bf3a34d0132e3290d9815e7bc3b7ac96023fa8ea8b2483e172e56a0272f309"
+      url "https://github.com/sg004baa/sabiql/releases/download/v1.14.0/sabiql-aarch64-apple-darwin.tar.xz"
+      sha256 "a7c8cc581653cfee8de934f0a8c3a33a7935914f70348b29297a4e8269b128f4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sg004baa/sabiql/releases/download/v1.12.9/sabiql-x86_64-apple-darwin.tar.xz"
-      sha256 "e856e9a342cc6e56e4605fbd9ed7ced0a635b917362e207006d2c6c4806c32e8"
+      url "https://github.com/sg004baa/sabiql/releases/download/v1.14.0/sabiql-x86_64-apple-darwin.tar.xz"
+      sha256 "4dc2cfac4d86b2410711eef9c9fdba35f7ccb88f748c3ca701edce5d4ab47710"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sg004baa/sabiql/releases/download/v1.12.9/sabiql-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "78149a4a9853fb9123fe85d4df3e5e995ec34779132ac2b15148b7fdfeeb411d"
+      url "https://github.com/sg004baa/sabiql/releases/download/v1.14.0/sabiql-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "cdc4c35b01b354e8aaad6a8b7a656ecdd53a18d556b9a2597bf93a8a4c122f6b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sg004baa/sabiql/releases/download/v1.12.9/sabiql-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "355e4ac2ca2ea52681a48b8372d8790feabff3e733bbee0747d0cf579fc4524c"
+      url "https://github.com/sg004baa/sabiql/releases/download/v1.14.0/sabiql-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "24adcfda9b580d0f2e6be1e830e6514c7ee7218719521b7ebb87effe33bd161a"
     end
   end
   license "MIT"
