@@ -1,25 +1,25 @@
 class SabiqlRedis < Formula
   desc "A driver-less TUI for browsing Redis keys"
   homepage "https://github.com/sg004baa/sabiql"
-  version "1.14.0"
+  version "1.15.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sg004baa/sabiql/releases/download/v1.14.0/sabiql-redis-aarch64-apple-darwin.tar.xz"
-      sha256 "2f2808b338582f818e380b5661329f31cfd006fa08f31b5cc08a95db91eab9fd"
+      url "https://github.com/sg004baa/sabiql/releases/download/v1.15.0/sabiql-redis-aarch64-apple-darwin.tar.xz"
+      sha256 "e8881c3ef74c65f8ff5952077d638d4da80458d21732f24604f4d27eed6addea"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sg004baa/sabiql/releases/download/v1.14.0/sabiql-redis-x86_64-apple-darwin.tar.xz"
-      sha256 "5817ff48cfe5e0c17184067bc011cb1faef3631e3d8c718cd312e0e0612e1459"
+      url "https://github.com/sg004baa/sabiql/releases/download/v1.15.0/sabiql-redis-x86_64-apple-darwin.tar.xz"
+      sha256 "d95edeed5f5660578065a34c6ec77a8b14caf4082767ee3a7dbbd3b7011a36ed"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sg004baa/sabiql/releases/download/v1.14.0/sabiql-redis-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "726659f90bb24a0e676c1be79124accfe5dd7bacdacd26f56a013655b5c1b194"
+      url "https://github.com/sg004baa/sabiql/releases/download/v1.15.0/sabiql-redis-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d384c98dd82ab9b8110e79104b87d9451094dbeb8df38604da9ddbf75eab072b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sg004baa/sabiql/releases/download/v1.14.0/sabiql-redis-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "47582b1a9ca1016ca0c19c6fed1d6ccdf1e35c00f24d57e662f83f57086b10c0"
+      url "https://github.com/sg004baa/sabiql/releases/download/v1.15.0/sabiql-redis-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "55206b9e34d419ece7bacf75f52d9da19306afc3549cabf4b54c4289992d9c48"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class SabiqlRedis < Formula
   end
 
   def install
-    bin.install "sabiql-redis" if OS.mac? && Hardware::CPU.arm?
-    bin.install "sabiql-redis" if OS.mac? && Hardware::CPU.intel?
-    bin.install "sabiql-redis" if OS.linux? && Hardware::CPU.arm?
-    bin.install "sabiql-redis" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "sabiql-redis"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "sabiql-redis"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "sabiql-redis"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "sabiql-redis"
+    end
 
     install_binary_aliases!
 
