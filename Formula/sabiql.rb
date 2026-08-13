@@ -1,25 +1,25 @@
 class Sabiql < Formula
   desc "A fast, driver-less TUI for browsing and editing PostgreSQL databases"
   homepage "https://github.com/sg004baa/sabiql"
-  version "1.14.0"
+  version "1.15.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sg004baa/sabiql/releases/download/v1.14.0/sabiql-aarch64-apple-darwin.tar.xz"
-      sha256 "a7c8cc581653cfee8de934f0a8c3a33a7935914f70348b29297a4e8269b128f4"
+      url "https://github.com/sg004baa/sabiql/releases/download/v1.15.0/sabiql-aarch64-apple-darwin.tar.xz"
+      sha256 "7de82a4e1663199db69743dfc43fef025c8415c073ed539b906409167c211a96"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sg004baa/sabiql/releases/download/v1.14.0/sabiql-x86_64-apple-darwin.tar.xz"
-      sha256 "4dc2cfac4d86b2410711eef9c9fdba35f7ccb88f748c3ca701edce5d4ab47710"
+      url "https://github.com/sg004baa/sabiql/releases/download/v1.15.0/sabiql-x86_64-apple-darwin.tar.xz"
+      sha256 "3001088bc0865587d434ddde95b5f4f114e541342ed5569cfabb226b9f912bbb"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sg004baa/sabiql/releases/download/v1.14.0/sabiql-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "cdc4c35b01b354e8aaad6a8b7a656ecdd53a18d556b9a2597bf93a8a4c122f6b"
+      url "https://github.com/sg004baa/sabiql/releases/download/v1.15.0/sabiql-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ee50de94c950a3fe97929a2d223d3d1354dd495f1ae4e6a30172eb3bcbcc8964"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sg004baa/sabiql/releases/download/v1.14.0/sabiql-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "24adcfda9b580d0f2e6be1e830e6514c7ee7218719521b7ebb87effe33bd161a"
+      url "https://github.com/sg004baa/sabiql/releases/download/v1.15.0/sabiql-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "4d078e299b6058737cbb8da10d82098316f1f654fa189dbe489b2cfb166c8a85"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Sabiql < Formula
   end
 
   def install
-    bin.install "sabiql" if OS.mac? && Hardware::CPU.arm?
-    bin.install "sabiql" if OS.mac? && Hardware::CPU.intel?
-    bin.install "sabiql" if OS.linux? && Hardware::CPU.arm?
-    bin.install "sabiql" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "sabiql"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "sabiql"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "sabiql"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "sabiql"
+    end
 
     install_binary_aliases!
 
