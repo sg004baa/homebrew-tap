@@ -1,5 +1,5 @@
 class Rusting < Formula
-  desc "A terminal API client for organizing and sending HTTP requests"
+  desc "Terminal API client for organizing and sending HTTP requests"
   homepage "https://github.com/sg004baa/rusting"
   version "0.2.0"
   if OS.mac?
