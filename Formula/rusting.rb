@@ -1,25 +1,25 @@
 class Rusting < Formula
-  desc "Terminal API client for organizing and sending HTTP requests"
+  desc "A terminal API client for organizing and sending HTTP requests"
   homepage "https://github.com/sg004baa/rusting"
-  version "0.2.0"
+  version "0.2.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sg004baa/rusting/releases/download/0.2.0/rusting-aarch64-apple-darwin.tar.xz"
-      sha256 "4cbd7836db1248e61a2a0b76c03c7cae6a1249e706de70ec54dc8da2e9627763"
+      url "https://github.com/sg004baa/rusting/releases/download/v0.2.1/rusting-aarch64-apple-darwin.tar.xz"
+      sha256 "5cf2ec55252d323f3bf190168be613449e854f6d3f3b85d351c7364bdcc8233e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sg004baa/rusting/releases/download/0.2.0/rusting-x86_64-apple-darwin.tar.xz"
-      sha256 "2b9fa72de38a2b520fbf32f798eb8b89f7c9d0775be13c09f481ae01bb4e9717"
+      url "https://github.com/sg004baa/rusting/releases/download/v0.2.1/rusting-x86_64-apple-darwin.tar.xz"
+      sha256 "76c20a81faf52f97d9e2c48aed897a71113346fdc576d6b15e2e66f58ae0ee24"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sg004baa/rusting/releases/download/0.2.0/rusting-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "fb78039e1e8dfc254a66d256f376b3b90d801675db81ff2e352bcf032631dd42"
+      url "https://github.com/sg004baa/rusting/releases/download/v0.2.1/rusting-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "fc9a975124cf012cde291bc6c36f3558adb1258363038e6b6fd1d018b874710f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sg004baa/rusting/releases/download/0.2.0/rusting-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6205ccd705d206bf9b069c60744d1d05908e95efa2cca1f98d47e7fab9b59bc3"
+      url "https://github.com/sg004baa/rusting/releases/download/v0.2.1/rusting-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "96a7d844acb953495d07ea1598b2f77caf7097e3e60a4ab3d32bd6f609dd663b"
     end
   end
   license "Apache-2.0"
@@ -48,10 +48,18 @@ class Rusting < Formula
   end
 
   def install
-    bin.install "rusting" if OS.mac? && Hardware::CPU.arm?
-    bin.install "rusting" if OS.mac? && Hardware::CPU.intel?
-    bin.install "rusting" if OS.linux? && Hardware::CPU.arm?
-    bin.install "rusting" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "rusting"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "rusting"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "rusting"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "rusting"
+    end
 
     install_binary_aliases!
 
