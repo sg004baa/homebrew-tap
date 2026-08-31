@@ -5,21 +5,21 @@ class Rusting < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/sg004baa/rusting/releases/download/v0.2.2/rusting-aarch64-apple-darwin.tar.xz"
-      sha256 "100c770d5d9c307e77e77d42d91e8b39a8b46b3c827549014be472b8375ca52f"
+      sha256 "6a2c153f0a8e16d67877b171845cae5c8ad00cc424d5c1b6c0f383ee21829d66"
     end
     if Hardware::CPU.intel?
       url "https://github.com/sg004baa/rusting/releases/download/v0.2.2/rusting-x86_64-apple-darwin.tar.xz"
-      sha256 "2d3a420e8604732d6d5e9f6f29d146d573cb542beec5f32265af4f476cf1df5a"
+      sha256 "767b1aa8be1e2e137276722c7c9955316b0e9c1e78df2874f0c5db801d451601"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/sg004baa/rusting/releases/download/v0.2.2/rusting-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "975fbd42f38c7a3d45b9e30afe82d96f3af8eb61641a64f474f963bec8e21712"
+      sha256 "65b5c2e4939ed610ca3913760f843ea813e412a9836346712adb5546c78fddd3"
     end
     if Hardware::CPU.intel?
       url "https://github.com/sg004baa/rusting/releases/download/v0.2.2/rusting-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c0d133be005f32e031dddbba30b5d6756fc12bdfa8c11ab4ffad4f21fe9fd9d2"
+      sha256 "23c81046d56f085487c825847e90f1a3c672fb914b235ee028def9104b9f46d9"
     end
   end
   license "Apache-2.0"
