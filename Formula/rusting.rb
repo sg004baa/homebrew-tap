@@ -1,25 +1,25 @@
 class Rusting < Formula
   desc "A terminal API client for organizing and sending HTTP requests"
   homepage "https://github.com/sg004baa/rusting"
-  version "0.2.4"
+  version "0.2.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sg004baa/rusting/releases/download/v0.2.4/rusting-aarch64-apple-darwin.tar.xz"
-      sha256 "72fee0a270b21b3fc993e1bb270c426acc898e3b26ec243197c2b24b1abba269"
+      url "https://github.com/sg004baa/rusting/releases/download/v0.2.5/rusting-aarch64-apple-darwin.tar.xz"
+      sha256 "5af914894220a56d47ffeb7b579fc32aa8faac8031db73702eac56ba46911947"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sg004baa/rusting/releases/download/v0.2.4/rusting-x86_64-apple-darwin.tar.xz"
-      sha256 "e3f2eb5ab02405d808c1fe84798f90705baeb77bd809cda36281ea235fa06261"
+      url "https://github.com/sg004baa/rusting/releases/download/v0.2.5/rusting-x86_64-apple-darwin.tar.xz"
+      sha256 "64ad1cd9de8d2f9926b5722303dfcc305abde248bacbafaa06c8d3487b163412"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sg004baa/rusting/releases/download/v0.2.4/rusting-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "3b7bdadcaa2d879df38d22660b99b5e2c10394551fdd6779be9c5a4400076a8d"
+      url "https://github.com/sg004baa/rusting/releases/download/v0.2.5/rusting-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "69d923bcd9ae565a557b63994d58113b71685b780cf4704b11d6f4ab437b20cf"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sg004baa/rusting/releases/download/v0.2.4/rusting-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "0f4b2460ec2206433fb5b99ab0aa60afd7bb0fb30a9976fad1043fad1106308a"
+      url "https://github.com/sg004baa/rusting/releases/download/v0.2.5/rusting-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "006f049d8beae1fa992fa98e803bb36a084628f7c64f60bfd3886b6863036aca"
     end
   end
   license "Apache-2.0"
