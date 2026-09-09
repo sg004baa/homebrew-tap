@@ -1,36 +1,36 @@
 class Prtop < Formula
   desc "Terminal TUI for monitoring GitHub pull requests you're involved in as author or reviewer"
   homepage "https://github.com/sg004baa/prtop"
-  version "0.1.7"
+  version "0.1.8"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sg004baa/prtop/releases/download/v0.1.7/prtop-aarch64-apple-darwin.tar.xz"
-      sha256 "61fda974e9c83ab37ee0302bfed1bd243dd4428cb94c904d333faeaa927a9b8c"
+      url "https://github.com/sg004baa/prtop/releases/download/v0.1.8/prtop-aarch64-apple-darwin.tar.xz"
+      sha256 "c29cff58a8acf125ac3386ca8c9a605c0813d3677191398cc6afee3a2e2f239e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sg004baa/prtop/releases/download/v0.1.7/prtop-x86_64-apple-darwin.tar.xz"
-      sha256 "ffef770ff3be95a9daec0436683190684fe9f8fed0582a653791aa010f7e34ef"
+      url "https://github.com/sg004baa/prtop/releases/download/v0.1.8/prtop-x86_64-apple-darwin.tar.xz"
+      sha256 "0d337ddcc9c441558704963cccd5cf3b842b2b884966c4447524716450d5464f"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sg004baa/prtop/releases/download/v0.1.7/prtop-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "d6f1159c5b7f82bac58151d02cbd579d9720716290117bfa03d0e331106bd061"
+      url "https://github.com/sg004baa/prtop/releases/download/v0.1.8/prtop-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "402d1b76257974d10a51ce7df756522a1521eee0fb54d70957366c6cf06c79e3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sg004baa/prtop/releases/download/v0.1.7/prtop-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d3f273ce390f4834cfb9fe53a5489362b1730138a34b907fd11ca677bd6661db"
+      url "https://github.com/sg004baa/prtop/releases/download/v0.1.8/prtop-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "043e8cf5eba4d245d18cf2198d9649eb021336df95a9f02cacde2e77d97ac737"
     end
   end
   license "MIT"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin": {},
+    "aarch64-apple-darwin":      {},
     "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin": {},
-    "x86_64-pc-windows-gnu": {},
-    "x86_64-unknown-linux-gnu": {}
-  }
+    "x86_64-apple-darwin":       {},
+    "x86_64-pc-windows-gnu":     {},
+    "x86_64-unknown-linux-gnu":  {},
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
