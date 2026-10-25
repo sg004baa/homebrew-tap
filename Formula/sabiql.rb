@@ -1,25 +1,25 @@
 class Sabiql < Formula
   desc "Fast, safe-by-design, Vim-first DB TUI with ER diagrams"
   homepage "https://github.com/sg004baa/sabiql"
-  version "3.0.1"
+  version "3.0.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sg004baa/sabiql/releases/download/v3.0.1/sabiql-aarch64-apple-darwin.tar.xz"
-      sha256 "89e4173c56ab009297c3f897d03af574fc3dec4482a5dee09fce563737fc6d4d"
+      url "https://github.com/sg004baa/sabiql/releases/download/v3.0.2/sabiql-aarch64-apple-darwin.tar.xz"
+      sha256 "dc7abcf09f2abd58134e91a625e12a843c844208c7dc13c01cea9febe7498482"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sg004baa/sabiql/releases/download/v3.0.1/sabiql-x86_64-apple-darwin.tar.xz"
-      sha256 "ce0c73a870d3dd3e640063478c9fd149f9a05c5954dbebc7ee0409cf11229a08"
+      url "https://github.com/sg004baa/sabiql/releases/download/v3.0.2/sabiql-x86_64-apple-darwin.tar.xz"
+      sha256 "a1f786bee77ed17407aebddbff5129626d1d83a9fe1970f733a2cc8545fd324b"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sg004baa/sabiql/releases/download/v3.0.1/sabiql-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "eb205d424c4c376e529aba6d0a03c1b3af1ce4b43447019670f815f13320cbf7"
+      url "https://github.com/sg004baa/sabiql/releases/download/v3.0.2/sabiql-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ac7cff5cc5434c6d9b686c284ce5527e467b10d942043ad1baced0c2ebdf4d16"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sg004baa/sabiql/releases/download/v3.0.1/sabiql-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1a56aca19a84b89b084d3690743a4ddf2f66f6333286bd6623cdce8791fd677e"
+      url "https://github.com/sg004baa/sabiql/releases/download/v3.0.2/sabiql-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "46aab74de5a9315ed50e92b0552a438a49438e810bbd54071cfd59857eb0b667"
     end
   end
   license "MIT"
