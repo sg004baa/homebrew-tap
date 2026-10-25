@@ -1,25 +1,25 @@
 class SabiqlRedis < Formula
   desc "A driver-less TUI for browsing Redis keys"
   homepage "https://github.com/sg004baa/sabiql"
-  version "3.0.1"
+  version "3.0.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sg004baa/sabiql/releases/download/v3.0.1/sabiql-redis-aarch64-apple-darwin.tar.xz"
-      sha256 "1e29ce82ef39fb9d4de5ccc550072e2e8f359ab764f6331d076b75511a6a0bc9"
+      url "https://github.com/sg004baa/sabiql/releases/download/v3.0.2/sabiql-redis-aarch64-apple-darwin.tar.xz"
+      sha256 "911d24aff9bbdfcb92d390e868963ac55512ffe9e73b2dcd48488da39e9195c5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sg004baa/sabiql/releases/download/v3.0.1/sabiql-redis-x86_64-apple-darwin.tar.xz"
-      sha256 "a83ea81d9827fb7380e186f17c2559148e83308a8da4883f3dd260361c85c73d"
+      url "https://github.com/sg004baa/sabiql/releases/download/v3.0.2/sabiql-redis-x86_64-apple-darwin.tar.xz"
+      sha256 "16586c5e74fe3a998d82ecb455b219a223c1dac9f10b6cb32f24178606fd0699"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sg004baa/sabiql/releases/download/v3.0.1/sabiql-redis-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "51f0ad77b9a3393860f8f39b9f56c6f0abf978c53b6f49fe6f366fea7893a533"
+      url "https://github.com/sg004baa/sabiql/releases/download/v3.0.2/sabiql-redis-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "7fa02e805892a72ddb86a5e137ea89fbe80b4fe0a247685540816e629a114472"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sg004baa/sabiql/releases/download/v3.0.1/sabiql-redis-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "eaf9e03db25c90faf563b313e0c55173ae78cc24d63cc6e82fe5e1ebf0ff6b3f"
+      url "https://github.com/sg004baa/sabiql/releases/download/v3.0.2/sabiql-redis-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "bbf372638ecf6111a9ea3740627cd3eef608d0936a576e266d70cc573d0edb79"
     end
   end
   license "MIT"
